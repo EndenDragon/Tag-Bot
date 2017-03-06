@@ -52,7 +52,7 @@ async def on_server_join(server):
             has_tag_channel = True
             channel = chan
     if not has_tag_channel:
-        channel = await create_channel(server, "tag")
+        channel = await client.create_channel(server, "tag")
     await client.send_message(channel, "Hello! I am the one, and only Tag Bot. Mention a user in this channel to start a never-ending game of tag!")
 
 @client.event
